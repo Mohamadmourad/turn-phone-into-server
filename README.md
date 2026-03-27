@@ -17,6 +17,7 @@ This guide explains how to turn your Android phone into a functional server usin
 - Open Termux and update the packages:
   ```bash
   pkg update && pkg upgrade
+  ```
 
 ---
 
@@ -27,7 +28,12 @@ This guide explains how to turn your Android phone into a functional server usin
    proot-distro install debian
    proot-distro login debian
   ```
-2. **Install `proot-distro` in Termux:**
+2. **Update Debian packages:**
+  Once inside Debian, update and upgrade the packages first:
+  ```bash
+  apt update && apt upgrade
+  ```
+3. **Install Cloudflared:**
 
    ```bash
    apt install wget
@@ -52,7 +58,7 @@ This guide explains how to turn your Android phone into a functional server usin
    ```
    
 
-3. **Install Git, Node.js, and npm:** (or any tool you need for your server)
+4. **Install Git, Node.js, and npm:** (or any tool you need for your server)
   ```bash
   apt install git nodejs
   ```
