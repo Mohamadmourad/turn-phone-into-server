@@ -46,10 +46,12 @@ This guide explains how to turn your Android phone into a functional server usin
 
 
   ### now write the following commands:
-  
-    mv cloudflared-linux-arm cloudflared
-    chmod +x cloudflared
-    mv cloudflared $PREFIX/bin/
+
+  ```bash
+  mv cloudflared-linux-arm* cloudflared
+  chmod +x cloudflared
+  mv cloudflared $PREFIX/bin/
+  ```
   
   
   #### to check if its working type the following command:
@@ -72,6 +74,8 @@ This guide explains how to turn your Android phone into a functional server usin
 1. Go to your Cloudflare dashboard in the **Account Home** tab click on add a domain
 2. Go to your domain name provider delete all nameservers and add cloudflare one
 
+ Use the nameservers shown in **your Cloudflare dashboard** (they are unique per account). For example:
+
  *daisy.ns.cloudflare.com*
 
  and
@@ -90,6 +94,7 @@ this process might take some time to verify but once its completed they will sen
 
 ```bash
 termux-setup-storage
+mkdir -p ~/.cloudflared/
 cp /storage/emulated/0/Download/cert.pem ~/.cloudflared/
 ```
 
@@ -104,7 +109,7 @@ nano ~/.cloudflared/config.yml
 8. add the following content:
 ```bash
 tunnel: <tunnel-id>
-credentials-file: /data/data/com.termux/files/home/.cloudflared/my-tunnel.json
+credentials-file: /data/data/com.termux/files/home/.cloudflared/<tunnel-id>.json
 
 ingress:
   - hostname: subdomain.yourdomain.com
