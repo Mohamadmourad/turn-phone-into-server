@@ -15,6 +15,12 @@
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen" alt="Contributions Welcome">
 </p>
 
+## Video Tutorial
+
+[![Watch the video](https://img.youtube.com/vi/62LxkfvY_pQ/maxresdefault.jpg)](https://youtu.be/62LxkfvY_pQ?si=UwOQoLs7PcdzHM2V)
+
+---
+
 This guide explains how to turn your Android phone into a functional server using Termux. Termux is a powerful terminal emulator that allows you to run a Linux-like environment on your phone. By the end of this guide, you'll have a fully functional web server hosted from your device.
 
 ---
